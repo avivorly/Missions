@@ -1,1 +1,10 @@
-<%= Mission.all.inspect %>
+123
+<script>
+    Ext.onReady(function() {
+        Ext.create('Missions.Panel',{
+            items: [
+                Ext.create('Missions.missionsGrid')
+            ]
+        })
+    });
+</script>

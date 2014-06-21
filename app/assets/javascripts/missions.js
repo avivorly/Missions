@@ -1,2 +1,11 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+Ext.ns('Missions');
+Ext.ns('Mission');
+Ext.ns('missions');
+Ext.ns('mission');
+Ext.define('Missions.Panel', {
+    extend: 'Ext.panel.Panel',
+    layout: 'anchor',
+    renderTo: 'content',
+    minHeight: 400,
+    border: false
+});
