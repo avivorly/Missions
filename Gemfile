@@ -20,6 +20,7 @@ gem 'rails_12factor', group: :production
 ruby "1.9.3"
 gem 'mysql'
 #heroku end
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password

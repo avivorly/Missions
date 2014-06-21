@@ -1,10 +1,16 @@
 class MissionsController < ApplicationController
   before_action :set_mission, only: [:show, :edit, :update, :destroy]
 
+
+  # default_scope Mission.where(:user_id => User.current)
   # GET /missions
   # GET /missions.json
   def index
-    @missions = Mission.order(:done).all
+    p '='*100
+    p current_user
+    p current_user.id
+    p current_user.email
+    @missions = Mission.where(:user_id => current_user.id).order(:done)#.where(user_id:User.current).all
   end
 
   # GET /missions/1
@@ -14,7 +20,7 @@ class MissionsController < ApplicationController
 
   # GET /missions/new
   def new
-    @mission = Mission.new
+    @mission = Mission.new :user_id => current_user.id# user_id:  Thread.current[:user].id
   end
 
   # GET /missions/1/edit
@@ -24,7 +30,7 @@ class MissionsController < ApplicationController
   # POST /missions
   # POST /missions.json
   def create
-    @mission = Mission.new(mission_params)
+    @mission = Mission.new(mission_params.merge({'user_id'=> current_user.id}))
 
     respond_to do |format|
       if @mission.save
