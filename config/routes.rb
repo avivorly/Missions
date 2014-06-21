@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :missions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
   root 'missions#index'
 
@@ -53,5 +54,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get ':controller(/:action(/:id))(.:format)'
+  # get ':controller(/:action(/:id))(.:format)'
+
 end

@@ -3,3 +3,13 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+
+<script>
+    Ext.onReady(function() {
+        Ext.create('Missions.Panel',{
+            items: [
+                Ext.create('Missions.missionsGrid')
+            ]
+        })
+    });
+</script>
