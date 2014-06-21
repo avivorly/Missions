@@ -1,11 +1,10 @@
-<h1>Listing missions</h1>
+<h1>המשימות שלי</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Details</th>
-      <th>Done</th>
+      <th>כותרת</th>
+      <th>בוצע</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +13,10 @@
     <% @missions.each do |mission| %>
       <tr>
         <td><%= mission.title %></td>
-        <td><%= mission.details %></td>
-        <td><%= mission.done %></td>
-        <td><%= link_to 'Show', mission %></td>
-        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= mission.done ? 'כן':'לא' %></td>
+        <td><%= link_to 'פתח', mission %></td>
+        <td><%= link_to 'ערוך', edit_mission_path(mission) %></td>
+        <td><%= link_to 'מחק', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Mission', new_mission_path %>
+<%= link_to 'משימה חדשה', new_mission_path %>

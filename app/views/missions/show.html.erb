@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>כותרת:</strong>
   <%= @mission.title %>
 </p>
 
 <p>
-  <strong>Details:</strong>
+  <strong>פירוט:</strong>
   <%= @mission.details %>
 </p>
 
 <p>
-  <strong>Done:</strong>
-  <%= @mission.done %>
+  <strong>בוצע:</strong>
+  <%= @mission.done ? 'כן':'לא'  %>
 </p>
 
-<%= link_to 'Edit', edit_mission_path(@mission) %> |
-<%= link_to 'Back', missions_path %>
+<%= link_to 'ערוך', edit_mission_path(@mission) %> |
+<%= link_to 'חזור', missions_path %>
