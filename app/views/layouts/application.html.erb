@@ -6,11 +6,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-<div id='top-bar' class="blue"></div>
+<div id='top-bar'></div>
 <div id='content' class="blue">
-  <h3><%= "שלום #{(Thread.current[:user] = current_user).try :email}" %></h3>
+  <div id="user-widget">
+    <% if current_user %>
+        Welcome <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <% end %>
+  </div>
 <%= yield %>
 </div>
 </body>
