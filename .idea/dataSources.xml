@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails Missions: development" uuid="ab9fcfa6-0546-4869-8687-b1662436bcaf">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/missions</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/missionsfghfgh</jdbc-url>
       <user-name>avivdb1</user-name>
       <user-password>dfdedfcddfc2df9fdffedff4df8cdfcddf9fdf92dfe3df9fdf99dfcfdfd8df81</user-password>
       <libraries />
