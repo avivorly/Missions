@@ -6,11 +6,11 @@ class MissionsController < ApplicationController
   # GET /missions
   # GET /missions.json
   def index
-    p '='*100
-    p current_user
-    p current_user.id
-    p current_user.email
-    @missions = Mission.where(:user_id => current_user.id).order(:done)#.where(user_id:User.current).all
+    # p '='*100
+    # p current_user
+    # p current_user.id#nil
+    # p current_user.email
+    # @missions = Mission.where(:user_id => current_user.id).order(:done)#.where(user_id:User.current).all
   end
 
   # GET /missions/1
