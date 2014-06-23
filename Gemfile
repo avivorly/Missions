@@ -20,6 +20,7 @@ gem 'rails_12factor', group: :production
 ruby "1.9.3"
 gem 'mysql'
 #heroku end
+gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 
