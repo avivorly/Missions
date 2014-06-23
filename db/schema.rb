@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140622180137) do
     t.string   "title"
     t.text     "details"
     t.boolean  "done"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

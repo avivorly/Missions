@@ -4,7 +4,7 @@ class CreateMissions < ActiveRecord::Migration
       t.string :title
       t.text :details
       t.boolean :done
-      t.integer :user_id
+      t.references :user
       t.timestamps
     end
   end

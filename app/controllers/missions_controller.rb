@@ -10,7 +10,7 @@ class MissionsController < ApplicationController
     # p current_user
     # p current_user.id#nil
     # p current_user.email
-    @missions = []#Mission.where(:user_id => current_user.id).order(:done)#.where(user_id:User.current).all
+    @missions = current_user.missions.order(:done)
   end
 
   # GET /missions/1
@@ -46,6 +46,7 @@ class MissionsController < ApplicationController
   # PATCH/PUT /missions/1
   # PATCH/PUT /missions/1.json
   def update
+    raise 'no permistion' if @mission.user.id != current_user.id
     respond_to do |format|
       if @mission.update(mission_params)
         format.html { redirect_to @mission, notice: 'Mission was successfully updated.' }
@@ -60,6 +61,7 @@ class MissionsController < ApplicationController
   # DELETE /missions/1
   # DELETE /missions/1.json
   def destroy
+    raise 'no permistion' if @mission.user.id != current_user.id
     @mission.destroy
     respond_to do |format|
       format.html { redirect_to missions_url, notice: 'Mission was successfully destroyed.' }
