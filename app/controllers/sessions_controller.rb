@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
     auth = env['omniauth.auth']
     user = User.from_omniauth(auth)
     session[:image]=  auth['info']['image']
+    p "=====set user id to #{user.id}========="
     session[:user_id] = user.id
     redirect_to root_url
   end

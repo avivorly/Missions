@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
+    p "current_user startet and session id #{session[:user_id]}"
     user = (@current_user ||= User.find(session[:user_id]) if session[:user_id])
     p "========#{user.inspect}========#{user.try(&:name)}================"
     user
