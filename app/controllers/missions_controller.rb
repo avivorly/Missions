@@ -10,6 +10,7 @@ class MissionsController < ApplicationController
     # p current_user
     # p current_user.id#nil
     # p current_user.email
+    p "=====I'm getting to index, current_user:#{current_user.inspect}   ==="
     @missions = current_user.missions.order(:done)
   end
 
