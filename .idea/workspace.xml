@@ -88,8 +88,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/missions/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4670139" vertical-offset="316" max-vertical-offset="975">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.47395834" vertical-offset="39" max-vertical-offset="1092">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -756,7 +756,11 @@
       <created>1403853028084</created>
       <updated>1403853028084</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ready to upload&#10; working&#10; with picture&#10;8&#10;">
+      <created>1403853731045</created>
+      <updated>1403853731045</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -811,7 +815,8 @@
     <MESSAGE value="ready to upload&#10;working&#10;with picture&#10;5" />
     <MESSAGE value="ready to upload&#10; working&#10; with picture&#10; 6" />
     <MESSAGE value="ready to upload&#10; working&#10; with picture&#10; 7&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ready to upload&#10; working&#10; with picture&#10; 7&#10;" />
+    <MESSAGE value="ready to upload&#10; working&#10; with picture&#10;8&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ready to upload&#10; working&#10; with picture&#10;8&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1199,8 +1204,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/missions/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4670139" vertical-offset="316" max-vertical-offset="975">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.47395834" vertical-offset="39" max-vertical-offset="1092">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>
