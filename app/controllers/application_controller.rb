@@ -9,8 +9,16 @@ class ApplicationController < ActionController::Base
   private
   def current_user
     p "current_user startet and session id #{session[:user_id]}"
-    user = (@current_user ||= User.find(session[:user_id]) if session[:user_id])
-    p "========#{user.inspect}========#{user.try(&:name)}================"
+    if session[:user_id]
+      user = (@current_user ||= User.find_by_id(session[:user_id]))
+      if user
+        p "user#{user.id} found "
+      else
+        p "puck useris#{user.inspect} shit "
+      end
+    end
+
+    p "after sesion========#{user.inspect}========#{user.try(&:name)}================"
     user
   end
   helper_method :current_user
