@@ -1,22 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%p '{0}123456789123456789' %>
-  <strong>כותרת:</strong>
-  <%p '{1}fghfghfghfgfghfgh' %>
-  <%= @mission.title.html_safe %>
-  <%p '{2}fghfghfghfgfghfgh' %>
-</p>
-
-<p>
-  <strong>פירוט:</strong>
-  <%= @mission.details.html_safe %>
-</p>
-
-<p>
-  <strong>בוצע:</strong>
-  <%= (@mission.done ? 'כן':'לא'  ).html_safe%>
-</p>
 
 <%= link_to 'ערוך', edit_mission_path(@mission) %> |
 <%= link_to 'חזור', missions_path %>
