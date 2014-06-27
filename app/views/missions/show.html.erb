@@ -1,5 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Title:</strong>
+  <%= @mission.title %>
+</p>
 
-<%= link_to 'ערוך', edit_mission_path(@mission) %> |
-<%= link_to 'חזור', missions_path %>
+<p>
+  <strong>Details:</strong>
+  <%= @mission.details %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @mission.done %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>
