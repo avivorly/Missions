@@ -4,7 +4,12 @@ class MissionsController < ApplicationController
   # GET /missions
   # GET /missions.json
   def index
-    @missions = current_user.missions.all
+    @missions = if current_user.try(:id)
+                 current_user.missions.all
+               else
+                 [(Mission.new title: 'please load page again', id: -1)]
+               end
+
   end
 
   # GET /missions/1
@@ -63,13 +68,13 @@ class MissionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_mission
-      @mission = Mission.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_mission
+    @mission = Mission.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def mission_params
-      params.require(:mission).permit(:title, :details, :done)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def mission_params
+    params.require(:mission).permit(:title, :details, :done)
+  end
 end
