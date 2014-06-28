@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622180137) do
+ActiveRecord::Schema.define(version: 20140628122624) do
 
   create_table "missions", force: true do |t|
     t.string   "title"
-    t.text     "details"
+    t.string   "details"
     t.boolean  "done"
     t.integer  "user_id"
     t.datetime "created_at"

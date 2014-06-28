@@ -1,17 +1,10 @@
 class MissionsController < ApplicationController
   before_action :set_mission, only: [:show, :edit, :update, :destroy]
 
-
-  # default_scope Mission.where(:user_id => User.current)
   # GET /missions
   # GET /missions.json
   def index
-    # p '='*100
-    # p current_user
-    # p current_user.id#nil
-    # p current_user.email
-    p "=====I'm getting to index, current_user:#{current_user.inspect}   ==="
-    @missions = current_user.missions.order(:done)
+    @missions = current_user.missions.all
   end
 
   # GET /missions/1
@@ -21,7 +14,7 @@ class MissionsController < ApplicationController
 
   # GET /missions/new
   def new
-    @mission = Mission.new :user_id => current_user.id# user_id:  Thread.current[:user].id
+    @mission = Mission.new
   end
 
   # GET /missions/1/edit
@@ -31,7 +24,8 @@ class MissionsController < ApplicationController
   # POST /missions
   # POST /missions.json
   def create
-    @mission = Mission.new(mission_params.merge({'user_id'=> current_user.id}))
+    @mission = Mission.new(mission_params)
+    @mission.user = current_user
 
     respond_to do |format|
       if @mission.save
@@ -47,7 +41,6 @@ class MissionsController < ApplicationController
   # PATCH/PUT /missions/1
   # PATCH/PUT /missions/1.json
   def update
-    raise 'no permistion' if @mission.user.id != current_user.id
     respond_to do |format|
       if @mission.update(mission_params)
         format.html { redirect_to @mission, notice: 'Mission was successfully updated.' }
@@ -62,7 +55,6 @@ class MissionsController < ApplicationController
   # DELETE /missions/1
   # DELETE /missions/1.json
   def destroy
-    raise 'no permistion' if @mission.user.id != current_user.id
     @mission.destroy
     respond_to do |format|
       format.html { redirect_to missions_url, notice: 'Mission was successfully destroyed.' }

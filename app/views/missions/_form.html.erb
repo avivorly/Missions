@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label'כותרת' %><br>
+    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label 'פירוט'%><br>
-    <%= f.text_area :details %>
+    <%= f.label :details %><br>
+    <%= f.text_field :details %>
   </div>
   <div class="field">
-    <%= f.label 'בוצע' %><br>
+    <%= f.label :done %><br>
     <%= f.check_box :done %>
   </div>
   <div class="actions">
-    <%= f.submit 'שלח טופס' %>
+    <%= f.submit %>
   </div>
 <% end %>
