@@ -11,7 +11,7 @@
 
   <tbody>
     <% @missions.each do |mission| %>
-      <tr class="#{mission.done? 'green' : 'blue'}">
+      <tr class=<%="#{mission.done? ? 'green' : 'blue'}"%>>
         <td><%= mission.title %></td>
         <td><%= mission.done %></td>
         <td><%= link_to 'Show', mission %></td>
