@@ -4,8 +4,8 @@ class MissionsController < ApplicationController
   # GET /missions
   # GET /missions.json
   def index
-    @missions = if current_user.try(:id)
-                 current_user.missions.order(:done).all
+    @missions = if current_user.try(:id) && current_user.id.present?
+                  Mission.where(:user_id => current_user.id).order(:done).all
                else
                  [(Mission.new title: 'please load page again', id: -1)]
                end
