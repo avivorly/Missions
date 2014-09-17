@@ -23,6 +23,7 @@ gem 'mysql'
 gem 'devise'#123
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+# gem 'rails-i18n', '~> 3.0.0' # For 3.x
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

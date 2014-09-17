@@ -5,16 +5,16 @@
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/missionsfghfgh675677</jdbc-url>
-      <user-name>avivdb1</user-name>
-      <user-password>dfdedfcddfc2df9fdffedff4df8cdfcddf9fdf92dfe3df9fdf99dfcfdfd8df81</user-password>
+      <user-name>root</user-name>
+      <user-password>dfd9dfdedf8edfdedfeedff8df8fdf80dfccdfdcdfc1df9edf9f</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails Missions: test" uuid="c77b722e-d4ff-4136-a1e4-8f5d4c8c794f">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/Missions_test</jdbc-url>
-      <user-name>avivdb1</user-name>
-      <user-password>dfdedfcddfc2df9fdffedff4df8cdfcddf9fdf92dfe3df9fdf99dfcfdfd8df81</user-password>
+      <user-name>root</user-name>
+      <user-password>dfd9dfdedf8edfdedfeedff8df8fdf80dfccdfdcdfc1df9edf9f</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails Missions: production" uuid="158aad1b-1440-4772-b8de-1a39f247175c">

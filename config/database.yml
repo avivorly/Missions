@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: avivdb1
-  password: tgh5T^&g58I53er+
+  username: root
+  password: st$tDR%*fvk45
   host: localhost
 
 development:
