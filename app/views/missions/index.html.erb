@@ -14,8 +14,8 @@
       <tr class=<%="#{mission.done? ? 'green' : 'blue'}"%>>
         <td><%= mission.title %></td>
         <td><%= mission.done %></td>
-        <td><%= link_to 'צפייה', mission %></td>
-        <td><%= link_to 'עריכה', edit_mission_path(mission) %></td>
+        <td><%= link_to 'Show', mission %></td>
+        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
       </tr>
     <% end %>
   </tbody>
