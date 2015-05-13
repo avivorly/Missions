@@ -13,7 +13,7 @@ class ExportController < ApplicationController
           model.column_names
       ] +   model.where(:user_id => current_user.id).map(&:attributes).map(&:values)
 
-    end.flatten(1).map { |a| a.join(',') }.join("\n")
+    end.flatten(1).map { |a| a.map{|str| str.to_s.gsub(',', ';') }.join(',') }.join("\n")
 
 
     respond_to do |format|
