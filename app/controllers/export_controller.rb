@@ -10,9 +10,8 @@ class ExportController < ApplicationController
     str = "#{current_user.name}-data\n" + models.map do |model|
       [
           [model],
-          model.column_names,
-          model.where(:user_id => current_user.id).map(&:attributes).map(&:values)
-      ]
+          model.column_names
+      ] +   model.where(:user_id => current_user.id).map(&:attributes).map(&:values)
 
     end.flatten(1).map { |a| a.join(',') }.join("\n")
 
