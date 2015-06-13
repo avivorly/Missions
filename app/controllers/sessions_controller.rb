@@ -5,16 +5,11 @@ class SessionsController < ApplicationController
     auth = env["omniauth.auth"]
 
 
-    if auth.try :uid
-      user = User.from_omniauth(auth)
-      session[:user_id] = user.id
-      session[:image]= auth['info']['image']
-    end
+
 
 
     if auth.try :uid
       user = User.from_omniauth(auth)
-      user = User.find(2)
       p '*'*100;p '*'*100;p '*'*100;p '*'*100;
       p session[:user_id] = user.id
       p '*'*100
