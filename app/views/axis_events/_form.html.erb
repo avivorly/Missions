@@ -1,0 +1,28 @@
+<%= form_for(@axis_event) do |f| %>
+  <% if @axis_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@axis_event.errors.count, "error") %> prohibited this axis_event from being saved:</h2>
+
+      <ul>
+      <% @axis_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

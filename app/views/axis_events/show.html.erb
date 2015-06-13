@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @axis_event.rank %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @axis_event.description %>
+</p>
+
+<%= link_to 'Edit', edit_axis_event_path(@axis_event) %> |
+<%= link_to 'Back', axis_events_path %>

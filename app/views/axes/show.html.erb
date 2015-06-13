@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%=
+      Rails.instance_variable_set(:@axis_id, @axis.id)
+      Rails.class_variable_set(:@@axis_id, @axis.id)
+      @axis.name
+
+  %>
+</p>
+<td><%=
+
+    link_to 'new_event', controller: :axis_events, action: :new, :axis_id=>(session[:axis_id] = Rails.class_variable_set(:@@axis_id, @axis.id))%></td>
+<% @axis.axis_events.each do |event|
+
+%>
+    <br>
+    <tbody>
+        <tr >
+          <td><%=  event.rank %></td>
+          <td><%= event.description %></td>
+          <td><%= event.created_at.to_date.to_s %></td>
+          <td><%= link_to 'Edit', edit_axis_event_path(event) %></td>
+        </tr>
+    </tbody>
+
+<% end %>
+<br>
+<%= link_to 'Edit', edit_axis_path(@axis) %>
+<%= link_to 'Back', axes_path %>

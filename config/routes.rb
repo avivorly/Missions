@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :axis_events
+
+  resources :axes
+
   resources :ideas
 
   resources :missions
