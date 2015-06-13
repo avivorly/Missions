@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def create
     auth = env["omniauth.auth"]
-raise 'cvxcvdgvdfgdfg'
+# raise 'cvxcvdgvdfgdfg'
     if auth.try :uid
       user = User.from_omniauth(auth)
       p '*'*100;p '*'*100;p '*'*100;p '*'*100;
