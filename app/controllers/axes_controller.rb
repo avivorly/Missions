@@ -4,7 +4,7 @@ class AxesController < ApplicationController
   # GET /axes
   # GET /axes.json
   def index
-    @axes = Axis.all
+    @axes = Axis.where(:user_id => current_user.id).all
   end
 
   # GET /axes/1
