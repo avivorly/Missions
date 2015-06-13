@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :identification
   protect_from_forgery
 
-  def identification
+  def identification # TODO
     # only for home use
    # @current_user = User.first
    # session[:user_id] = true
