@@ -15,7 +15,6 @@ class ExportController < ApplicationController
 
     end.flatten(1).map { |a| a.map{|str| str.to_s.gsub(',', ';') }.join(',') }.join("\n")
 
-
     respond_to do |format|
       format.html
       format.csv {

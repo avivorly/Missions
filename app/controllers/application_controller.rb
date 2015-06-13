@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 
   def identification
     # only for home use
-   @current_user = User.first
-   session[:user_id] = true
+   # @current_user = User.first
+   # session[:user_id] = true
     redirect_to log_in_path unless session[:user_id]
   end
 

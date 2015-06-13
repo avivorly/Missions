@@ -3,11 +3,14 @@ class SessionsController < ApplicationController
 
   def create
     auth = env["omniauth.auth"]
-
+raise 'cvxcvdgvdfgdfg'
     if auth.try :uid
       user = User.from_omniauth(auth)
+      p '*'*100;p '*'*100;p '*'*100;p '*'*100;
+      p session[:user_id] = user.id
+      p '*'*100
       session[:user_id] = user.id
-      session[:image]= auth['info']['image']
+      session[:image] = auth['info']['image']
     end
 
     redirect_to root_url
