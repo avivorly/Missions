@@ -10,5 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
+//= require angular
+//= require lib/angular-cookies.min
+//= require lib/angular-mocks
+//= require lib/angular-resource.min
+//= require lib/angular-route.min
+//= require App
+//= require controllers
+//= require services
 //= require_self

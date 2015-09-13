@@ -1,7 +1,28 @@
-/*!
- * Ext JS Library 4.0
- * Copyright(c) 2006-2011 Sencha Inc.
- * licensing@sencha.com
- * http://www.sencha.com/license
- */
+'use strict';
+
+/* App Module */
+
+var blogApp = angular.module('blogApp', [
+    'ngRoute',
+    'blogControllers',
+    'blogServices'
+
+]);
+
+
+blogApp.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+        $routeProvider.
+            when('/', {
+                templateUrl: 'partials/main.html',
+                controller: 'BlogCtrl'
+            }).when('/blogPost/:id', {
+                templateUrl: 'partials/blogPost.html',
+                controller: 'BlogViewCtrl'
+            });
+
+        $locationProvider.html5Mode(false).hashPrefix('!');
+    }]);
+
+
 

@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
-  resources :axis_events
+  #
+  # Users::Application.routes.draw do
+  #   scope 'api' do
+  #     resources :axes
+  #   end
+  # end
 
+  # resources :axis_events
+  #
   resources :axes
-
-  resources :ideas
-
-  resources :missions
+  #
+  # resources :ideas
+  #
+  # resources :missions
 
   devise_for :users
 
@@ -66,6 +73,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get ':controller(/:action(/:id))(.:format)'
+  # get ':controller(/:action(/:id))(.:format)'
 
 end

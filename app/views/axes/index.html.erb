@@ -1,25 +1,19 @@
-<h1>Listing axes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @axes.each do |axis| %>
-      <tr>
-        <td><%= axis.name %></td>
-        <td><%= link_to 'Show', axis %></td>
-        <td><%= link_to 'Edit', edit_axis_path(axis) %></td>
-        <td><%= link_to 'Destroy', axis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Axis', new_axis_path %>
+<div id="container" class="container" ng-app="blogApp" ng-controller="BlogViewCtrl">
+  <div class="blog-post-label">AVivinder</div>
+  <div class="post-wrapper">
+    <div  ng-repeat="blogPost in blogList">
+      <div class="blog-post-outer">
+        <div class="blog-intro-text">
+          {{blogPost.id}}
+          <input ng-model="blogPost.name">
+          <button text="save" ng-click="update(blogPost.id, blogPost.name)">update</button>
+        </div>
+        <div class="blog-read-more">
+          <a href="#!blogPost/{{blogPost._id}}">Read More</a>
+        </div>
+      </div>
+    </div>
+    <button ng-click="create(name)">add more</button>
+    <input ng-show="add" ng-model="name">
+  </div>
+</div>

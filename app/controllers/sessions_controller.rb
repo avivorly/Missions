@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
 
 
     if auth.try :uid
-      user = User.from_omniauth(auth)
-    #  user = User.first
+      # user = User.from_omniauth(auth)
+    user = User.first
       p '*'*100;p '*'*100;p '*'*100;p '*'*100;
       p session[:user_id] = user.id
       p '*'*100

@@ -138,6 +138,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.1.1, ruby-1.9.3-p545 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.1.1, ruby-1.9.3-p545 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.1.1, ruby-1.9.3-p545 (1)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="angularjs-rails (v1.4.4, ruby-1.9.3-p545 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v5.0.1.20140414130214, ruby-1.9.3-p545 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.7, ruby-1.9.3-p545 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, ruby-1.9.3-p545 (1)) [gem]" level="application" />

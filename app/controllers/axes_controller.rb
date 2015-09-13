@@ -1,10 +1,26 @@
 class AxesController < ApplicationController
+
   before_action :set_axis, only: [:show, :edit, :update, :destroy]
+
 
   # GET /axes
   # GET /axes.json
   def index
-    @axes = Axis.where(:user_id => current_user.id).all
+
+
+    respond_to do |format|
+
+      format.html { @axes = Axis.where(:user_id => current_user.id).all }
+      format.json { render json: Axis.all }
+    end
+  end
+
+  def data
+
+    respond_to do |format|
+      format.html {}
+      format.json { render json: Axis.all }
+    end
   end
 
   # GET /axes/1
@@ -24,16 +40,21 @@ class AxesController < ApplicationController
   # POST /axes
   # POST /axes.json
   def create
-    @axis = Axis.new(axis_params)
-    @axis.user = current_user
+    # @axis = Axis.new(axis_params)
+    # @axis.user = current_user
+    # respond_to do |format|
+    #   if @axis.save
+    #     format.html { redirect_to @axis, notice: 'Axis was successfully created.' }
+    #     format.json { render :show, status: :created, location: @axis }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @axis.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
     respond_to do |format|
-      if @axis.save
-        format.html { redirect_to @axis, notice: 'Axis was successfully created.' }
-        format.json { render :show, status: :created, location: @axis }
-      else
-        format.html { render :new }
-        format.json { render json: @axis.errors, status: :unprocessable_entity }
-      end
+
+      format.json { render json:  Axis.create( name: params[:name]) }
     end
   end
 
@@ -41,14 +62,11 @@ class AxesController < ApplicationController
   # PATCH/PUT /axes/1.json
   def update
     respond_to do |format|
-      if @axis.update(axis_params)
-        format.html { redirect_to @axis, notice: 'Axis was successfully updated.' }
-        format.json { render :show, status: :ok, location: @axis }
-      else
-        format.html { render :edit }
-        format.json { render json: @axis.errors, status: :unprocessable_entity }
-      end
+
+      format.json { render json:  Axis.find(params[:id]).update( name: params[:name]) }
     end
+
+    # end
   end
 
   # DELETE /axes/1
@@ -62,13 +80,13 @@ class AxesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_axis
-      @axis = Axis.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_axis
+    @axis = Axis.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def axis_params
-      params.require(:axis).permit(:name)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def axis_params
+    params.require(:axis).permit(:name)
+  end
 end
